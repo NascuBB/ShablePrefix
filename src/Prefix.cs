@@ -204,28 +204,3 @@ namespace ShablePrefics
         }
     }
 }
-
-
-
-
-
-
-
-//File.WriteAllText("prefixes.json", JsonConvert.SerializeObject(rem));
-//string jsonData = JsonConvert.SerializeObject(rem);
-
-
-//if(obj.PrefToId.Contains(id.ToString()))
-//{
-
-//    string[] half = previous.Split('=');
-//    string oldPref = half[1];
-//    string str = half[1].Replace(oldPref,prefix);
-//    File.WriteAllText(ConfigPath, $"{half[0]}={str}\"}}");
-//}
-//else
-//{
-
-//    string complete = previous + "\n" + text;
-//    File.WriteAllText(ConfigPath, complete);
-//}
