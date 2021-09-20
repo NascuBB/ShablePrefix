@@ -14,4 +14,21 @@ Simple custom prefix handler on c# for discord bot
 To connect custom prefixes to your bot you need:
 ```cs
 using ShablePrefics;
+.
+.
+.
+//command handler
+private async Task HandleCommandAsync(SocketMessage rawMessage)
+{
+            //your code
+
+            //when you're checking for prefix 
+            if (message.HasStringPrefix(await Prefix.GetPrefix(context.Guild,_prefics), ref argPos) || !(message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
+            {
+            
+                    
+            }
+
+
+}
 ```
