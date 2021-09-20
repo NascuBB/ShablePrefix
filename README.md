@@ -42,7 +42,7 @@ private async Task HandleCommandAsync(SocketMessage rawMessage)
             when you're checking for prefix you must replace your default string prefix with
             await Prefix.GetPrefix(guild that requested(Example: contet.Guild), default prefix of your bot)
             */
-            if (message.HasStringPrefix(await Prefix.GetPrefix(context.Guild,_defaultPrefics), ref argPos) || !(message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
+            if (message.HasStringPrefix(await Prefix.GetPrefix(context.Guild,_defaultPrefics), ref argPos) && !(message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
             {
                         //command responding etc
             }
