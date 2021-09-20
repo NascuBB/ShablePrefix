@@ -19,14 +19,17 @@ using ShablePrefics;
 .
 //when bot is ready
 private async Task OnReady()
-            {
-            /*if you connecting Shable prefix first time, 
+{
+            /*
+            if you connecting Shable prefix first time, 
             before checking you must to create json file for guilds and their prefixes.
             Just write await Prefix.StartShable(), and you don't have to touch it anymore.
             */
-                   await Prefix.StartShable();
-                   //ready stuff
-            }
+            
+            await Prefix.StartShable();
+            
+            //ready stuff
+}
 .
 .
 .
