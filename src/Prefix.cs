@@ -66,7 +66,7 @@ namespace ShablePrefics
                         int index = Array.FindIndex(ids,x => x.Contains(item));
                         //copying item from list
                         string desiredStr = ids[index];
-                        //splitting string on two halfs, one is guild id and second is its prefix
+                        //rosbivaem string on two halfs, one is guild id and second is its prefix
                         string[] half = desiredStr.Split('=');
                         //overwriting prefix
                         string strin = $"{half[0]}={prefix}";
@@ -136,12 +136,9 @@ namespace ShablePrefics
                 }
                 if (add)
                 {
-                    //finding index of requested guild
                     int index = Array.FindIndex(ids, x => x.Contains(item));
                     string desiredStr = ids[index];
-                    //splitting string
                     string[] halfs = desiredStr.Split('=');
-                    //getting prefix
                     string prefix = halfs[1];
 
                     return Task.FromResult(prefix);
@@ -176,11 +173,10 @@ namespace ShablePrefics
                 {
                     if (str.Contains(item))
                     {
-                        //finding index with guild we want to delete
                         int RemIndex = Array.FindIndex(ids, x => x.Contains(item));
-                        //removing guild and its prefix
+
                         ids = ids.Where((source, index) => index != RemIndex).ToArray();
-                        //overwriting document
+
                         var rem = new Shable
                         {
                             PrefToId = ids
@@ -190,7 +186,6 @@ namespace ShablePrefics
                         return Task.CompletedTask;
                     }
                 }
-                //very buggy
                 if (add == true)
                 {
                     throw new Exception("This server has no custom prefix");
@@ -209,3 +204,28 @@ namespace ShablePrefics
         }
     }
 }
+
+
+
+
+
+
+
+//File.WriteAllText("prefixes.json", JsonConvert.SerializeObject(rem));
+//string jsonData = JsonConvert.SerializeObject(rem);
+
+
+//if(obj.PrefToId.Contains(id.ToString()))
+//{
+
+//    string[] half = previous.Split('=');
+//    string oldPref = half[1];
+//    string str = half[1].Replace(oldPref,prefix);
+//    File.WriteAllText(ConfigPath, $"{half[0]}={str}\"}}");
+//}
+//else
+//{
+
+//    string complete = previous + "\n" + text;
+//    File.WriteAllText(ConfigPath, complete);
+//}
