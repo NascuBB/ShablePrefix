@@ -33,7 +33,7 @@ namespace ShablePrefics
                 if (!File.Exists(ConfigPath))
                 {
                     //if no, creating a new one and writing first guild with its prefix
-                    string[] str = { "test", $"{id}={prefix}" };
+                    string[] str = { "0", $"{id}={prefix}" };
                     var rem = new Shable
                     {
                         PrefToId = str
@@ -100,6 +100,52 @@ namespace ShablePrefics
                 return Task.FromException(ex);
             }
         }
+        /// <summary>
+        /// Checks for json file for prefixes
+        /// </summary>
+        public static Task StartShable()
+        {
+            try
+            {
+                //checking for directory
+                if (!Directory.Exists(ConfigFolder))
+                {
+                    Directory.CreateDirectory(ConfigFolder);
+                    //checking if file with prefixes exists
+                    if (!File.Exists(ConfigPath))
+                    {
+                        //if no, creating a new one and writing first guild with its prefix
+                        string[] str = { "0" };
+                        var rem = new Shable
+                        {
+                            PrefToId = str
+                        };
+                        var text = JsonConvert.SerializeObject(rem);
+                        File.WriteAllText(ConfigPath, text);
+                        return Task.CompletedTask;
+                    }
+                }
+                if (!File.Exists(ConfigPath))
+                {
+                    
+                    string[] str = { "0" };
+                    var rem = new Shable
+                    {
+                        PrefToId = str
+                    };
+                    var text = JsonConvert.SerializeObject(rem);
+                    File.WriteAllText(ConfigPath, text);
+                    return Task.CompletedTask;
+                }
+                return Task.CompletedTask;
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
         /// <summary>
         /// Gets prefix to a requered guild
         /// </summary>
