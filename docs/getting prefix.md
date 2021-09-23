@@ -3,7 +3,6 @@ Maybe it would be a ping command or something else.To get prefix you must:
 ```cs
         //command example (little bit stupid, but nevermind)
         [Command("getPrefix")]
-        [Alias("gp")]
         public async Task GetPrefix()
         {
             //to get prefix use GetPrefix
