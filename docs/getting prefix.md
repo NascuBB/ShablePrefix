@@ -6,7 +6,7 @@ Maybe it would be a ping command or something else.To get prefix you must:
         public async Task GetPrefix()
         {
             //to get prefix use GetPrefix
-            string prefix = await Prefix.GetPrefix(Context.Guild,Program._prefics);
+            string prefix = await Prefix.GetPrefix(Context.Guild, _prefics);
             await ReplyAsync($"My prefix on this server is: `{prefix}`");
         }
 ```
