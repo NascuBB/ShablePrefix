@@ -1,4 +1,4 @@
-#How to get prefix of guild
+# How to get prefix of guild
 Maybe it would be a ping command or something else.To get prefix you must:
 ```cs
         //command example (little bit stupid, but nevermind)
