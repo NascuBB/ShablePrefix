@@ -1,7 +1,7 @@
 ## ShablePrefix
 Simple custom prefix handler on c# for discord bot
 <p align="left">
-            <a href="https://www.nuget.org/packages/ShablePrefix/"><img src="https://img.shields.io/nuget/dt/ShablePrefix.svg?label=Downloads&logo=nuget&style=for-the-badge&logoWidth=30&labelColor=0d0d0d"/></a>    
+            <a href="https://www.nuget.org/packages/ShablePrefix/"><img src="https://img.shields.io/nuget/dt/ShablePrefix.svg?color=%23ff8e00&label=Downloads&logo=nuget&style=for-the-badge&logoWidth=30&labelColor=0d0d0d"/></a>    
 </p>
 
 
