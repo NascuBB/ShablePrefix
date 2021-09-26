@@ -53,3 +53,4 @@ private async Task HandleCommandAsync(SocketMessage rawMessage)
 
 }
 ```
+see more in <a href="https://github.com/NascuBB/ShablePrefix/tree/main/docs">docs</a>
