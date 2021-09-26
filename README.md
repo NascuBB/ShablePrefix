@@ -1,5 +1,8 @@
 ## ShablePrefix
 Simple custom prefix handler on c# for discord bot
+<p align="left">
+            <a href="https://www.nuget.org/packages/ShablePrefix/"><img src="https://img.shields.io/nuget/dt/ShablePrefix.svg?color=%23ff8e00&label=Downloads&logo=nuget&style=for-the-badge&logoWidth=30&labelColor=0d0d0d"/></a>    
+</p>
 
 
 
@@ -42,7 +45,8 @@ private async Task HandleCommandAsync(SocketMessage rawMessage)
             when you're checking for prefix you must replace your default string prefix with
             await Prefix.GetPrefix(guild that requested(Example: contet.Guild), default prefix of your bot)
             */
-            if (message.HasStringPrefix(await Prefix.GetPrefix(context.Guild,_defaultPrefics), ref argPos) && !(message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
+            if (message.HasStringPrefix(await Prefix.GetPrefix(context.Guild,_defaultPrefics), ref argPos) 
+                        && !(message.HasMentionPrefix(_client.CurrentUser, ref argPos)))
             {
                         //command responding etc
             }
@@ -50,3 +54,4 @@ private async Task HandleCommandAsync(SocketMessage rawMessage)
 
 }
 ```
+see more in <a href="https://github.com/NascuBB/ShablePrefix/tree/main/docs">docs</a>
