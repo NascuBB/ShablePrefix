@@ -7,6 +7,6 @@
         {
             //To remove prefix use RemovePrefix(Requested guild)
             await Prefix.RemovePrefix(Context.Guild);
-            await ReplyAsync(:white_check_mark:Done!)
+            await ReplyAsync(":white_check_mark:Done!");
         }
 ```
