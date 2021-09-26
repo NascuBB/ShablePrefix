@@ -18,6 +18,9 @@ namespace ShablePrefics
         /// <summary>
         /// Sets prefix to a chosen guild
         /// </summary>
+        /// <param name="guild">Requested guild</param>
+        /// <param name="prefix">New prefix</param>
+        /// <returns></returns>
         public static Task SetPrefix(IGuild guild, string prefix)
         {
             string text = "";
@@ -149,6 +152,8 @@ namespace ShablePrefics
         /// <summary>
         /// Gets prefix to a requered guild
         /// </summary>
+        /// <param name="guild"></param>
+        /// <param name="defaultPrefix">Your default prefix</param>
         /// <returns>Prefix of requested guild</returns>
         public static Task<string> GetPrefix(IGuild guild, string defaultPrefix)
         {
@@ -202,12 +207,11 @@ namespace ShablePrefics
         /// <summary>
         /// removes custom prefix for chosen guild
         /// </summary>
+        /// <param name="guild">Requested guild</param>
         public static Task RemovePrefix(IGuild guild)
         {
-
             try
             {
-
                 bool add = false;
                 ulong id = guild.Id;
                 string item = id.ToString();
@@ -240,8 +244,6 @@ namespace ShablePrefics
                 {
                     return Task.CompletedTask;
                 }
-
-
             }
             catch (Exception ex)
             {
