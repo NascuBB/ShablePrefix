@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ShablePrefix</name>
+    </assembly>
+    <members>
+        <member name="M:ShablePrefics.Prefix.SetPrefix(Discord.IGuild,System.String)">
+            <summary>
+            Sets prefix to a chosen guild
+            </summary>
+            <param name="guild">Requested guild</param>
+            <param name="prefix">New prefix</param>
+            <returns></returns>
+        </member>
+        <member name="M:ShablePrefics.Prefix.StartShable">
+            <summary>
+            Checks for json file for prefixes
+            </summary>
+        </member>
+        <member name="M:ShablePrefics.Prefix.GetPrefix(Discord.IGuild,System.String)">
+            <summary>
+            Gets prefix to a requered guild
+            </summary>
+            <param name="guild"></param>
+            <param name="defaultPrefix">Your default prefix</param>
+            <returns>Prefix of requested guild</returns>
+        </member>
+        <member name="M:ShablePrefics.Prefix.RemovePrefix(Discord.IGuild)">
+            <summary>
+            removes custom prefix for chosen guild
+            </summary>
+            <param name="guild">Requested guild</param>
+        </member>
+    </members>
+</doc>

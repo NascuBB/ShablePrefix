@@ -67,12 +67,8 @@ namespace ShablePrefics
 
                         //finding index of guild in list
                         int index = Array.FindIndex(ids, x => x.Contains(item));
-                        //copying item from list
-                        string desiredStr = ids[index];
-                        //rosbivaem string on two halfs, one is guild id and second is its prefix
-                        string[] half = desiredStr.Split('=');
                         //overwriting prefix
-                        string strin = $"{half[0]}={prefix}";
+                        string strin = $"{guild.Id}={prefix}";
                         //overwriting item
                         ids[index] = strin;
                         //serealizing and rewriting json document
@@ -85,7 +81,7 @@ namespace ShablePrefics
                     }
                     else
                     {
-                        string newId = $"{id}={prefix}";
+                        string newId = $"{id}⠀{prefix}";
                         string[] result = Ext.Append(ids, newId);
                         var rem = new Shable
                         {
@@ -189,8 +185,7 @@ namespace ShablePrefics
                 {
                     int index = Array.FindIndex(ids, x => x.Contains(item));
                     string desiredStr = ids[index];
-                    string[] halfs = desiredStr.Split('=');
-                    string prefix = halfs[1];
+                    string prefix = desiredStr.Substring(19);
 
                     return Task.FromResult(prefix);
                 }
