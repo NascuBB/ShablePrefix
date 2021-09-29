@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
@@ -36,7 +36,7 @@ namespace ShablePrefics
                 if (!File.Exists(ConfigPath))
                 {
                     //if no, creating a new one and writing first guild with its prefix
-                    string[] str = { "0", $"{id}={prefix}" };
+                    string[] str = { "0", $"{id}⠀{prefix}" };
                     var rem = new Shable
                     {
                         PrefToId = str
@@ -68,7 +68,7 @@ namespace ShablePrefics
                         //finding index of guild in list
                         int index = Array.FindIndex(ids, x => x.Contains(item));
                         //overwriting prefix
-                        string strin = $"{id}={prefix}";
+                        string strin = $"{id}⠀{prefix}";
                         //overwriting item
                         ids[index] = strin;
                         //serealizing and rewriting json document
