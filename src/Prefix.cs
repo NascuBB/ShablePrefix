@@ -68,7 +68,7 @@ namespace ShablePrefics
                         //finding index of guild in list
                         int index = Array.FindIndex(ids, x => x.Contains(item));
                         //overwriting prefix
-                        string strin = $"{guild.Id}⠀{prefix}";
+                        string strin = $"{id}⠀{prefix}";
                         //overwriting item
                         ids[index] = strin;
                         //serealizing and rewriting json document
